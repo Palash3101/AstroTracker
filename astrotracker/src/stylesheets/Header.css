@@ -1,0 +1,27 @@
+.head-box{
+
+  height: 80px;
+}
+
+.top-box{
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+
+  text-align: center;
+}
+
+
+.head-link-box{
+  display: flex;
+
+  margin-top: 5px;
+}
+
+.head-links{
+  color: beige;
+  font-size: 15px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
