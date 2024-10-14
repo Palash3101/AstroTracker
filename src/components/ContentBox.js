@@ -8,9 +8,9 @@ function ContentBox() {
       <div className='image-box'>
         <img src={image} alt='Hahahah' className='image'/>
       </div>
-      <div className='title-box'>Title</div>
-      <div className='desc-box'> ajwadiad widb
-        wadi wdhihdawhd iawhd iuawhidu ahwid 
+      <div className='title-box'>Saturn's Rings</div>
+      <div className='desc-box'> How long will Saturn's Rings
+        last before they disappear?
       </div>
       <div className='author-box'> Author</div>
     </div>

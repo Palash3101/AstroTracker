@@ -1,7 +1,6 @@
 .main-box{
   height: 400px;
   width: 240px;
-
   background-color: gray;
 
 }
@@ -22,7 +21,6 @@
 .title-box{
   color: white;
   font-size: 24px;
-
   font-weight: bold;
 }
 
