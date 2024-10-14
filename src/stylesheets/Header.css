@@ -7,7 +7,7 @@
   font-size: 30px;
   color: white;
   font-weight: bold;
-
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
 .head-link-box{
   display: flex;
 
-  margin-top: 5px;
+  margin-top: 40px;
 }
 
 .head-links{
