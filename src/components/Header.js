@@ -6,7 +6,7 @@ function Header() {
 
   return (
       <div className='head-box'>
-        <div className='top-box'>Ask Astro</div>
+        <div className='top-box'>ASK ASTRO</div>
         <div className='head-link-box'>
 
           <a href= {link} className='head-links'>Home</a>

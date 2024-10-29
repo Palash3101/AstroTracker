@@ -1,9 +1,11 @@
 
-
-
 .main-content{
-  height: 600px;
-  margin-top: 40px;
+  height: 400px;
   display: flex;
   justify-content: space-evenly;
+}
+.content-box{
+  background-image: url("C:\Users\samhi\Desktop\AstroTracker\src\images\image3.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
 }

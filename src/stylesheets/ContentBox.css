@@ -1,31 +1,44 @@
 .main-box{
-  height: 400px;
-  width: 240px;
-  background-color: gray;
-
+  height: 350px;
+  width: 270px;
+  background-color:rgba(0,0,0,0.7);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .image-box, .title-box, .author-box, .desc-box  {
-  margin: 10px 10px 10px 10px;
+  /* margin: 10px 10px 10px 10px; */
+
 }
 
 .image-box{
-  padding: 15px 10px 10px 10px;
+  /* padding: 15px 10px 10px 10px; */
+  
 }
 
 .image{
-  height: 180px;
-  width: 180px;
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+
 }
 
 .title-box{
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
-.desc-box, .author-box{
+.desc-box{
   color: white;
-  font-size: 18px;
+  font-size: 15px;
+  text-align: center;
 }
-
+.author-box{
+  margin-top: 20px;
+  color: #fff;
+}

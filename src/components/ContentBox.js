@@ -1,5 +1,5 @@
 import '../stylesheets/ContentBox.css';
-import image from '../images/BlackHole.jpeg'
+import image from '../images/saturns_rings.webp'
 
 function ContentBox() {
 
