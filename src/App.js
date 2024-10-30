@@ -1,9 +1,11 @@
-import Home from "./pages/Home.js";
+// import Home from "./pages/Home.js";
+import UserProfile from "./pages/UserProfile.js";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
+    <div>
+      <UserProfile/>
+      {/* <Home /> */}
     </div>
   );
 }
