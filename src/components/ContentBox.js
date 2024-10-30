@@ -1,18 +1,16 @@
 import '../stylesheets/ContentBox.css';
 import image from '../images/saturns_rings.webp'
 
-function ContentBox() {
+function ContentBox(props) {
 
   return (
     <div className='main-box'>
       <div className='image-box'>
         <img src={image} alt='Hahahah' className='image'/>
       </div>
-      <div className='title-box'>Saturn's Rings</div>
-      <div className='desc-box'> How long will Saturn's Rings
-        last before they disappear?
-      </div>
-      <div className='author-box'> Author</div>
+      <div className='title-box'>{props.title}</div>
+      <div className='desc-box'>{props.content}</div>
+      <div className='author-box'>{props.author}</div>
     </div>
   )
 }
