@@ -1,11 +1,6 @@
+.blog-box{
+  background-image: url("../images/image3.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
 
-
-
-.main-content{
-  height: 600px;
-
-  margin-top: 40px;
-
-  display: flex;
-  justify-content: space-evenly;
 }
