@@ -1,0 +1,49 @@
+.UserProfile{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+.UserProfile > div{
+  width: 1000px;
+}
+
+.personal-data-box{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+
+  margin-top:   5px;
+  margin-bottom: 25px;
+}
+
+.profile-image{
+  width: 100px;
+  height: 100px;
+}
+
+
+.name{
+  font-size: 24px;
+}
+
+.about-me-box{
+  margin-bottom: 35px;
+}
+
+.subheading{
+  text-align: center;
+  font-size: 24px;
+
+  font-weight: bold;
+}
+
+.about-me-data{
+  font-size: 20px;
+  margin-top: 15px;
+}

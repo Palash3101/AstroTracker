@@ -1,11 +1,16 @@
 .foot-link-box{
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  height: 100px;
+
+  align-items: center;
+
+
+  background-color: black;
 }
 
 .foot-links{
-  color: beige;
+  color: white;
   font-size: 15px;
 
   margin-left: 15px;
