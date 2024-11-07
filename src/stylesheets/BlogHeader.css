@@ -1,0 +1,52 @@
+.header_container{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.header-left{
+
+
+}
+
+
+.blog-header{
+  font-size: 45px;
+  color: RGB(18,12,72);
+  font-weight: bold;
+}
+
+.header_author_data{
+  font-size: 20px;
+}
+
+
+.header-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  column-gap: 50px;
+
+  align-items: center;  
+
+}
+
+.but{
+  font-size:20px ;
+  width: 115px;
+  height:40px;
+
+  border-radius:25px ;
+  margin-bottom: 10px;
+
+  align-items: center;
+
+}
