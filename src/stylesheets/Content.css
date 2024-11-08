@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-evenly;
 }
-.content-box{
+.blog-box{
   background-image: url("../images/image3.jpg");
   background-repeat: no-repeat;
   background-size:cover;

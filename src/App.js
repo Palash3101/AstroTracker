@@ -1,11 +1,16 @@
-// import Home from "./pages/Home.js";
+import Home from "./pages/Home.js";
 import UserProfile from "./pages/UserProfile.js";
+import Login from "./pages/LoginForm.js";
+import Signup from "./pages/Signup.js";
 
 function App() {
   return (
     <div>
-      <UserProfile/>
-      {/* <Home /> */}
+      
+      {/* <Home />
+      <Login />
+      <Signup /> */}
+      <UserProfile />
     </div>
   );
 }
