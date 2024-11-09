@@ -1,5 +1,8 @@
 import Home from "./pages/Home.js";
+
+import BlogView from "./pages/BlogView.js";
 import UserProfile from "./pages/UserProfile.js";
+
 
 import { Highlights } from "./components/Highlights.js";
 import "./stylesheets/App.css";
@@ -28,7 +31,6 @@ function App() {
       <Login />
       <Signup /> */}
       
-
     </div>
 
     

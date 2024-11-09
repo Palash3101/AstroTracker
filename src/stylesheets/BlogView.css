@@ -1,0 +1,38 @@
+.container{
+  margin-bottom: 5%;
+}
+
+
+/* Css dekh lena ki dynamically image kaise resize kare */
+
+.blog-image{
+  max-width: 700px;
+  min-width: 400px;
+
+  margin-left: 6%;
+  margin-right: 2%;
+  margin-top: 1rem;
+
+  float: left;
+}
+
+
+.text{
+  font-size: 22px;
+  
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 1rem;
+}
+
+.related-blogs-title{
+  width: 100%;
+
+  margin-left: 6%;
+  margin-right: 6%;
+
+  font-size: 40px;
+  font-weight: bold;
+  
+  color: rgb(18, 12, 72);
+}
