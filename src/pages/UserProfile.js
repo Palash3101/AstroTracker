@@ -39,32 +39,32 @@ function UserProfile() {
     <main>
       <Header/>
     <div className='UserProfile'>
-      <div className='personal-data-box'>
+        <div className='personal-data-box'>
 
-        <div className='profile-image'>
-          Image
-        </div>
-
-        <div className='personal-data'>
-          <div className='name'>{personal_data.name}</div>
-          <div className='username'>{personal_data.username}</div>
-          <div className='other'>{personal_data.other}</div>
-          <div className='edit-profile'>
-            <button className='edit-profile-button'>Edit Profile</button>
+          <div className='profile-image'>
+            Image
           </div>
+
+          <div className='personal-data'>
+            <div className='name'>{personal_data.name}</div>
+            <div className='username'>{personal_data.username}</div>
+            <div className='other'>{personal_data.other}</div>
+            <div className='edit-profile'>
+              <button className='edit-profile-button'>Edit Profile</button>
+            </div>
+          </div>
+
         </div>
 
-      </div>
+        <div className='about-me-box'>
+          <div className='subheading'>About Me</div>
+          <div className='about-me-data'>{personal_data.about_me}</div>
+        </div>
 
-      <div className='about-me-box'>
-        <div className='subheading'>About Me</div>
-        <div className='about-me-data'>{personal_data.about_me}</div>
-      </div>
-
-      <div className='pinned-blog-box'>
-        <div className='subheading'>Pinned Blogs</div>
-        <BlogContainer data={blog_data} />
-      </div>
+        <div className='pinned-blog-box'>
+          <div className='pinned_subheading'>Pinned Blogs</div>
+          <BlogContainer data={blog_data} />
+        </div>
     </div>
     <Footer/>
     </main>

@@ -7,16 +7,6 @@ function Header() {
   return (
       <div className='head-box'>
         <div className='top-box'>ASK ASTRO</div>
-        <div className='head-link-box'>
-
-          <a href= {link} className='head-links'>Home</a>
-          <a href= {link} className='head-links'>Archive</a>
-          <a href= {link} className='head-links'>About</a>
-          <a href= {link} className='head-links'>Contact</a>
-          <a href= {link} className='head-links'>Blog</a>
-          <a href= {link} className='head-links'>Gallery</a>
-
-        </div>
       </div>
 
   )

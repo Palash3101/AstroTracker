@@ -1,0 +1,18 @@
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: #120d48;
+}
+
+.head-links{
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-style:normal;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
