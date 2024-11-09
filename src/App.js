@@ -14,7 +14,7 @@ function App() {
     {/* About Us Section */}
  <AboutUs data={aboutUsData} />
 
-      {/* Highlights Section */}
+      {/* Highlights section */}
       <Highlights data={highlightsData} />
       
      
