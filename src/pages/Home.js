@@ -5,6 +5,9 @@ import '../stylesheets/Home.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BlogContainer from '../components/BlogContainer'
+import Content from '../components/Content'
+import NavBar from '../components/NavBar'
+
 function Home() {
 
   const data = [
@@ -49,6 +52,8 @@ function Home() {
   return (
     <main>
       <Header />
+      <NavBar />
+
       <div className='blog-box'>
         <BlogContainer data={data} />
       </div>

@@ -1,25 +1,23 @@
 .UserProfile{
   display: flex;
   flex-direction: column;
-
   justify-content: flex-start;
   align-items: center;
-
   margin-top: 30px;
+  background-color: #030213
 }
 
 .UserProfile > div{
-  width: 1000px;
+  width: 900px;
 }
 
 .personal-data-box{
   display: flex;
   flex-direction: row;
-
   justify-content: flex-start;
-
   margin-top:   5px;
   margin-bottom: 25px;
+ 
 }
 
 .profile-image{
@@ -27,23 +25,57 @@
   height: 100px;
 }
 
-
 .name{
   font-size: 24px;
+  color: #ffff;
+}
+
+.username{
+  font-size: 24px;
+  color: #ffff;
+}
+.other{
+  font-size: 24px;
+  color: #ffff;
 }
 
 .about-me-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 35px;
+  border: 1px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px #48abe0;
+  color: #ffff;
 }
 
 .subheading{
+  margin-top: 25px;
   text-align: center;
   font-size: 24px;
-
+  color: #ffff;
   font-weight: bold;
 }
 
 .about-me-data{
   font-size: 20px;
-  margin-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.pinned-blog-box{
+  border: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px #48abe0;
+  padding: 25px;
+}
+.pinned_subheading{
+  border: 1px;
+  border-radius: 10px;
+  color: #ffff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
