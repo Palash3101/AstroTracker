@@ -1,30 +1,27 @@
-// Highlights.js
 import React from "react";
-import { highlightsData } from "./highlightsData"; // Adjust the path as necessary
+import HighlightCard from "./HighlightCard";
+import "../stylesheets/Highlights.css";
 
-export const Highlights = (props) => {
-  const data = props.data || highlightsData; // Use props data if available, otherwise fallback to default data
-
+export const Highlights = ({ data }) => {
   return (
-    <div id="highlights">
+    <section id="portfolio" className="highlights-section">
       <div className="container">
-        <h2>Highlights of the Week</h2>
-        <div className="row">
-          {data.events.map((event, index) => (
-            <div className="col-md-4" key={`${event.title}-${index}`}>
-              <div className="card">
-                <img src={event.imageUrl} className="card-img-top" alt={event.title} />
-                <div className="card-body">
-                  <h5 className="card-title">{event.title}</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">{event.date}</h6>
-                  <p className="card-text">{event.description}</p>
-                  <a href="#" className="btn btn-primary">Learn More</a>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="section-title">
+          <h2>Highlights of the Week</h2>
+          <p>Explore some of the most exciting updates and news of the week!</p>
+        </div>
+        <div className="grid-container">
+          {data && data.length > 0 ? (
+            data.map((item, index) => (
+              <HighlightCard key={index} item={item} />
+            ))
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
+
+export default Highlights;
