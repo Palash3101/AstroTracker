@@ -6,7 +6,7 @@ function Header() {
 
   return (
       <div className='head-box'>
-        <div className='top-box'>ASK ASTRO</div>
+        <div className='top-box'>CÉLESTE</div>
       </div>
 
   )

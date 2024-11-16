@@ -1,35 +1,27 @@
 import Home from "./pages/Home.js";
-
 import BlogView from "./pages/BlogView.js";
 import UserProfile from "./pages/UserProfile.js";
 
-
-import { Highlights } from "./components/Highlights.js";
 import "./stylesheets/App.css";
-import AboutUs from "./components/AboutUs";
-import { highlightsData, aboutUsData } from "./components/data";
-import Login from "./pages/LoginForm.js";
-import Signup from "./pages/Signup.js";
 
+import AstronomyCalendar from "./pages/AstronomyCalendar.js";
 import Login from "./pages/LoginForm.js";
 import Signup from "./pages/Signup.js";
+import Blog from "./pages/Blog.js";
+import NewGallery from "./pages/NewGallery.js";
 
 
 function App() {
   return (
     <div>
-
+      <Home/>
+      <Login/>
+      <Signup/>
       <UserProfile/>
-      {/* <Home /> */}
-
-    {/* About Us Section */}
- <AboutUs data={aboutUsData} />
-
-      {/* Highlights section */}
-      <Highlights data={highlightsData} />
-      {/* <Home />
-      <Login />
-      <Signup /> */}
+      <NewGallery/>
+      <AstronomyCalendar/>
+      <Blog/>
+      <BlogView/>
       
     </div>
 

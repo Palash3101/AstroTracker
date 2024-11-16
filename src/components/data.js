@@ -19,24 +19,6 @@ export const highlightsData = [
       image: "https://via.placeholder.com/400x250",
       link: "https://example.com/highlight-3"
     },
-    {
-      title: "Highlight 4",
-      description: "This is the description for highlight 4.",
-      image: "https://via.placeholder.com/400x250",
-      link: "https://example.com/highlight-4"
-    },
-    {
-      title: "Highlight 5",
-      description: "This is the description for highlight 5.",
-      image: "https://via.placeholder.com/400x250",
-      link: "https://example.com/highlight-5"
-    },
-    {
-      title: "Highlight 6",
-      description: "This is the description for highlight 6.",
-      image: "https://via.placeholder.com/400x250",
-      link: "https://example.com/highlight-6"
-    }
   ];
   
   export const aboutUsData = {
@@ -44,7 +26,7 @@ export const highlightsData = [
     description:
       "At AstroTracker, we are committed to making astronomy accessible and exciting for everyone. Our platform offers a wide range of features, including an Astronomical Calendar to keep you updated on upcoming celestial events, engaging Blogs and Articles on space-related topics, and Weekly Highlights to showcase key cosmic happenings. Registered users can receive personalized Notifications for major astronomical events, and explore a wealth of Educational Resources to deepen their knowledge.Looking ahead, we are excited to introduce features like a Moon Phase Tracker, immersive 360-degree views of celestial bodies, and even an e-commerce section for astronomy enthusiasts. Join us as we explore the universe, one star at a time!",
     points1: [
-      "Astronomical Event Calendar",
+      "Astro Calendar",
       "Expert Blogs and Articles",
       "Weekly Space Highlights",
       "Secure User Login"
@@ -52,8 +34,8 @@ export const highlightsData = [
     points2: [
         "Educational Resources",
         "Moon Phase Tracker (coming soon)",
-        "360-Degree Space Views",
-        "Active Astronomy Community"
+        "360-Degree VR Spacewalk",
+        "Active Astro Community"
     ]
   };
     

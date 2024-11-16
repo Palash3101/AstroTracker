@@ -17,3 +17,9 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
+body {
+  background-color: rgb(0, 0, 0);
+  background-size: cover;  /* Adjust to fit the screen */
+  background-repeat: no-repeat;  /* Prevent tiling */
+  background-position: center;  /* Center the image */
+}
