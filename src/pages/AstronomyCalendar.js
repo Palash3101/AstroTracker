@@ -1,5 +1,9 @@
 import React from 'react';
 import '../stylesheets/AstronomyCalendar.css';
+import Header from "../components/Header";
+//import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+
 function AstronomyCalendar() {
   const events = [
     {
@@ -13,7 +17,7 @@ function AstronomyCalendar() {
       description: 'The Moon will be located on the same side of the Earth as the Sun and will not be visible in the night sky. This phase occurs at 11:59 UTC...'
     },
     {
-      icon: '☿',
+      icon: '\u00A0☿\u00A0\u00A0',
       title: 'January 12 - Mercury at Greatest Western Elongation',
       description: 'The planet Mercury reaches greatest western elongation of 23.5 degrees from the Sun. This is the best time to view Mercury since it will be at its highest point above the horizon in the morning sky...'
     },
@@ -29,24 +33,30 @@ function AstronomyCalendar() {
       link: 'https://eclipse.gsfc.nasa.gov/'
     }
   ];
-   
+  
   return (
-    <div className="calendar-container">
-      <header>
-        <h1>Astronomy Calendar 2024</h1>
-        <p className="timezone">Coordinated Universal Time (UTC)</p>
-      </header>
+    <div>
+      <Header />
+      <NavBar />
+      <div className="calendar-container">
+        <header>
+          <h1>Astronomical Event Calendar 2024</h1>
+          <p className="timezone">Coordinated Universal Time (UTC)</p>
+        </header>
 
-      {events.map((event, index) => (
-        <section className="event" key={index}>
-          <div className="icon">{event.icon}</div>
-          <div className="event-details">
-            <h2>{event.title}</h2>
-            <p>{event.description}</p>
-            {event.link && <a href={event.link} target="_blank" rel="noopener noreferrer">More info</a>}
-          </div>
-        </section>
-      ))}
+        {events.map((event, index) => (
+          <section className="event" key={index}>
+            <div className="icon">{event.icon}</div>
+            <div className="event-details">
+              <h2>{event.title}</h2>
+              <p>{event.description}</p>
+              {event.link && <a href={event.link} target="_blank" rel="noopener noreferrer">More info</a>}
+            </div>
+          </section>
+        ))}
+
+        
+      </div>
     </div>
   );
 }

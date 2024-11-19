@@ -21,7 +21,20 @@ const AboutUs = ({ data }) => {
               {/* Points List */}
               {data.points1.concat(data.points2).map((point, index) => (
                 <div key={index} className="point-item">
-                  <span>✅</span> {point}
+                  {point === "360-Degree VR Spacewalk" ? (
+                    <a
+                      href="https://www.youtube.com/watch?v=hEdzv7D4CbQ&t=9s&pp=ygUWMzYwIGRlZ3JlZSBzcGFjZSB2aWRlbw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      ✅ {point}
+                    </a>
+                  ) : (
+                    <div>
+                      <span>✅</span> {point}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

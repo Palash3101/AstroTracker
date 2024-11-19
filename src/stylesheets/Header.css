@@ -1,17 +1,40 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-.head-box{
-  background-color: #fff;
+.head-box {
+  background-image: url(C:\Users\user\Documents\GitHub\AstroTracker\src\images\header.png); /* Use relative path */
   height: 90px;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Ensure content stays within bounds */
 }
 
-.top-box{
+.top-box {
   font-size: 30px;
-  color: #120d48;
+  color: #ffffff;
   font-weight: bold;
   text-align: center;
   margin-top: 30px;
+  white-space: nowrap; /* Prevent the text from wrapping */
+  overflow: hidden;    /* Hide overflow text */
+  display: inline-block;
+  animation: oscillate-text 12s ease-in-out infinite; /* Animation properties */
+}
+
+/* Keyframes for oscillating text movement and size change */
+@keyframes oscillate-text {
+  0% {
+    transform: translateX(0) scale(1.5); /* Normal position, normal size */
+  }
+  25% {
+    transform: translateX(-20%) scale(1); /* Move 20% to the left, increase size */
+  }
+  50% {
+    transform: translateX(0) scale(1.5); /* Back to normal position and size */
+  }
+  75% {
+    transform: translateX(20%) scale(1); /* Move 20% to the right, decrease size */
+  }
+  100% {
+    transform: translateX(0) scale(1.5); /* Back to normal position and size */
+  }
 }

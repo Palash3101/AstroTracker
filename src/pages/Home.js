@@ -3,10 +3,12 @@ import React from 'react'
 import '../stylesheets/Home.css'
 
 import Header from '../components/Header'
-import Footer from '../components/Footer'
+//import Footer from '../components/Footer'
 import BlogContainer from '../components/BlogContainer'
-import Content from '../components/Content'
 import NavBar from '../components/NavBar'
+import { Highlights } from "../components/Highlights.js";
+import { highlightsData, aboutUsData } from "../components/data";
+import AboutUs from "../components/AboutUs";
 
 function Home() {
 
@@ -57,7 +59,11 @@ function Home() {
       <div className='blog-box'>
         <BlogContainer data={data} />
       </div>
-      <Footer />
+       {/* About Us Section */}
+      <AboutUs data={aboutUsData} />
+       {/* Highlights section */}
+       <Highlights data={highlightsData} />
+      
     </main>
   )
 }

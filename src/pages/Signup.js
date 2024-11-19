@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../stylesheets/Signup.css';
 import NavBar from '../components/NavBar';
+import Header from '../components/Header'
+//import Footer from '../components/Footer'
 
 function Signup() {
   const [username, setUsername] = useState('');
@@ -19,10 +21,11 @@ function Signup() {
 
   return (
     <main>
+      <Header/>
       <NavBar />
       <div className="signup">
         <div className="signup-container">
-          <div className="heading">Sign up for Ask Astro</div>
+          <div className="heading">Sign up for Céleste</div>
           <form onSubmit={handleSubmit} className="signup-form">
             <div className="input-group">
               <label htmlFor="username">Username</label>
@@ -71,6 +74,7 @@ function Signup() {
           </div>
         </div>
       </div>
+      
     </main>
   );
 }

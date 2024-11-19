@@ -1,45 +1,83 @@
-.UserProfile{
+.UserProfile {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-top: 30px;
-  background-color: #030213
+  margin-bottom: 30px;
+  background-color: #030213;
 }
 
-.UserProfile > div{
+.UserProfile > div {
   width: 900px;
 }
 
-.personal-data-box{
+.personal-data-box {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top:   5px;
+  align-items: center;
+  margin-top: 5px;
   margin-bottom: 25px;
- 
+  width: 100%;
 }
 
-.profile-image{
+.profile-image {
   width: 100px;
   height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
 }
 
-.name{
-  font-size: 24px;
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personal-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 28px;
+  color: #ffff;
+  margin-bottom: 5px;
+}
+
+.username {
+  font-size: 22px;
+  color: #ffff;
+  margin-bottom: 5px;
+}
+
+.other {
+  font-size: 22px;
   color: #ffff;
 }
 
-.username{
-  font-size: 24px;
-  color: #ffff;
-}
-.other{
-  font-size: 24px;
-  color: #ffff;
+.edit-profile {
+  margin-left: auto;
 }
 
-.about-me-box{
+.edit-profile-button {
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #48abe0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-profile-button:hover {
+  background-color: #3797c4;
+}
+
+.about-me-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +88,7 @@
   color: #ffff;
 }
 
-.subheading{
+.subheading {
   margin-top: 25px;
   text-align: center;
   font-size: 24px;
@@ -58,24 +96,50 @@
   font-weight: bold;
 }
 
-.about-me-data{
+.about-me-data {
   font-size: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 25px;
   margin-right: 25px;
 }
-.pinned-blog-box{
+
+.pinned-blog-box {
   border: 5px;
   border-radius: 10px;
   box-shadow: 0 0 5px 5px #48abe0;
   padding: 25px;
 }
-.pinned_subheading{
+
+.pinned_subheading {
   border: 1px;
   border-radius: 10px;
   color: #ffff;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
+}
+
+/* New button styles for Write New Blog and My Blogs */
+.action-buttons {
+  display: flex;
+  justify-content: center; /* Align the buttons in the center */
+  gap: 160px; /* Reduces the space between the two buttons */
+  width: 100%;
+  margin-top: 25px;
+}
+
+.action-button {
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #48abe0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #3797c4;
 }

@@ -7,6 +7,8 @@ function Header() {
   return (
     <div className='nav-bar'>
         <a href= {link} className='head-links'>Home</a>
+        <a href= {link} className='head-links'>About Us</a>
+        <a href= {link} className='head-links'>Highlights</a>
         <a href= {link} className='head-links'>Astro Calender</a>
         <a href= {link} className='head-links'>Gallery</a>
         <a href= {link} className='head-links'>Blogs</a>

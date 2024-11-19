@@ -1,8 +1,8 @@
 import React from 'react'
 import '../stylesheets/BlogView.css'
-
+import NavBar from '../components/NavBar'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
+//import Footer from '../components/Footer'
 import BlogHeader from '../components/BlogHeader'
 import BlogContainer from '../components/BlogContainer'
 
@@ -48,6 +48,7 @@ function BlogView() {
   return (
     <div>
       <Header />
+      <NavBar />
       <BlogHeader data={blog_header_data}/>
       <div className='container'>
         <img src={image} alt='Hahahah' className='blog-image'/>
@@ -71,9 +72,8 @@ Sed aliquet nisi non orci suscipit bibendum. Nulla porta lorem sed est varius, a
         <div>
           <BlogContainer data={blog_data} />
         </div>
+        </div>
       </div>
-      <Footer />
-    </div>
   )
 }
 

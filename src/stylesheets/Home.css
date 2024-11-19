@@ -1,12 +1,15 @@
-
-.main-content{
-  height: 400px;
+.main-content {
+  height: 1000px;
   display: flex;
   justify-content: space-evenly;
 }
-.blog-box{
+
+.blog-box {
   background-image: url("../images/image3.jpg");
   background-repeat: no-repeat;
-  background-size:cover;
-
+  background-size: cover;
+  background-position: center bottom; /* Position the image at the bottom */
+  height: 950px; /* Increase the height to make the image extend further */
+  padding-bottom: 50px; /* Optional: Adds space below the image */
+  padding-top: 50px;
 }

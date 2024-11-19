@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import '../stylesheets/Login.css';
 import NavBar from '../components/NavBar'
+import Header from '../components/Header'
+//import Footer from '../components/Footer'
+
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -13,10 +16,11 @@ function Login() {
 
   return (
     <main>
+      <Header/>
     <NavBar />
     <div class="login">
     <div className="login-container">
-      <div class="heading">Sign in to Ask Astro</div>
+      <div class="heading">Login to Céleste</div>
       <form onSubmit={handleSubmit} className="login-form">
         <div className="input-group">
           <label htmlFor="username">Username or email address</label>
@@ -42,10 +46,11 @@ function Login() {
         <a href="#" className="forgot-password">Forgot password?</a>
       </form>
       <div className="options">
-          New to Ask Astro? <a href="#">Create an account</a>
+          New to Celeste? <a href="#">Create an account</a>
       </div>
     </div>
     </div>
+  
   </main>
   );
 }
