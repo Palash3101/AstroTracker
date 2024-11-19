@@ -21,7 +21,7 @@ function App() {
       <NewGallery/>
       <AstronomyCalendar/>
       <Blog/>
-      <BlogView/>
+      {/* <BlogView/> */}
       
     </div>
 
