@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div>
+     
       <Router>
         <Routes>
 
@@ -25,9 +26,11 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/user/:username" element={<UserProfile/>}/>
+            
         </Routes>
 
       </Router>
+
     </div>
 
     
