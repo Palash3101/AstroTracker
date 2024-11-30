@@ -20,7 +20,7 @@ function App() {
       <UserProfile/>
       <NewGallery/>
       <AstronomyCalendar/>
-      <Blog/>
+      {/* <Blog/> */}
       {/* <BlogView/> */}
       
     </div>
