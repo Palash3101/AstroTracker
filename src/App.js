@@ -9,6 +9,7 @@ import Login from "./pages/LoginForm.js";
 import Signup from "./pages/Signup.js";
 import Blog from "./pages/Blog.js";
 import NewGallery from "./pages/NewGallery.js";
+import NewBlog from "./pages/NewBlog.js";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
