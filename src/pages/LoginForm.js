@@ -2,21 +2,38 @@ import React, { useState } from 'react';
 import '../stylesheets/Login.css';
 import NavBar from '../components/NavBar'
 import Header from '../components/Header'
+
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 //import Footer from '../components/Footer'
 
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    alert(`Username: ${username}\nPassword: ${password}`);
+    const data = {username, password};
+
+    try{
+      console.log(data);
+      await axios.post("http://localhost:8800/login", data)
+      .then(res =>{
+        console.log(res);
+        navigate(`/user/${username}`)
+      });
+
+    }catch (err){
+      console.log(err);
+    }
+
   };
 
   return (
     <main>
-      <Header/>
+    <Header/>
     <NavBar />
     <div class="login">
     <div className="login-container">
@@ -43,10 +60,9 @@ function Login() {
           />
         </div>
         <button type="submit" className="sign-in-button">Sign in</button>
-        <a href="#" className="forgot-password">Forgot password?</a>
       </form>
       <div className="options">
-          New to Celeste? <a href="#">Create an account</a>
+          New to Celeste? <a href="/signup">Create an account</a>
       </div>
     </div>
     </div>
