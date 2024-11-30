@@ -29,13 +29,11 @@ export const highlightsData = [
       "Astro Calendar",
       "Expert Blogs and Articles",
       "Weekly Space Highlights",
-      "Secure User Login"
     ],
     points2: [
-        "Educational Resources",
-        "Moon Phase Tracker (coming soon)",
-        "360-Degree VR Spacewalk",
-        "Active Astro Community"
+      "Educational Resources",
+      "360-Degree VR Spacewalk",
+      "Secure User Login"
     ]
   };
     

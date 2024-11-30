@@ -29,13 +29,6 @@ function UserProfile() {
     }
   ];
 
-  const personal_data = {
-    name: 'Name',
-    username: '@username',
-    other: 'Kuch bhi',
-    about_me: 'kuch bhi kuch bhi'
-  };
-
   const [data, setData] = useState([]);
   const username = useParams().username;
 

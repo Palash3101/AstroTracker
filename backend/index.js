@@ -26,6 +26,15 @@ app.get("/", (req, res)=>{
   })
 })
 
+app.get("/calender", (req, res)=>{
+  const q = "select * from calender where cur_date between '2024-12-01' and '2024-12-10'";
+  db.query(q, (err,data)=>{
+
+    if (err) return res.json(err);
+    return res.json(data);
+  })
+})
+
 app.get("/user/:username", (req, res)=>{
   const q = "select * from `user_data` where username=? ";
 
