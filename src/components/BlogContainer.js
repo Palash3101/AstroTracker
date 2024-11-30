@@ -6,11 +6,11 @@ function BlogContainer(props) {
     <div className="main-content-box">
       { 
         props.data.map((item) =>(
-          <div key={item.id}>
+          <div key={item.title}>
             <ContentBox 
               title={item.title} 
-              content={item.desc}
-              author={item.author}
+              content={item.short_desc}
+              author={item.user_name}
             />
           </div>
         ))}
