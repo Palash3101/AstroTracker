@@ -11,19 +11,27 @@ import Blog from "./pages/Blog.js";
 import NewGallery from "./pages/NewGallery.js";
 import NewBlog from "./pages/NewBlog.js";
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Home/>
-      <Login/>
-      <Signup/>
-      <UserProfile/>
-      <NewGallery/>
-      <AstronomyCalendar/>
-      <Blog/>
-      <BlogView/>
-      <NewBlog/>
+     
+      <Router>
+        <Routes>
+
+          <Route path="/calender" element={<AstronomyCalendar/>} />
+          <Route path="/blog" element={<Blog/>} />
+          <Route path="/Gallery" element={<NewGallery/>}/>
+          <Route path="/" element={<Home/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<Signup/>}/>
+          <Route path="/user/:username" element={<UserProfile/>}/>
+            
+        </Routes>
+
+      </Router>
+
     </div>
 
     

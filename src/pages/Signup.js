@@ -2,20 +2,32 @@ import React, { useState } from 'react';
 import '../stylesheets/Signup.css';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header'
+import axios from 'axios';
 //import Footer from '../components/Footer'
 
 function Signup() {
+
+  
+  const [Name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
     } else {
-      alert(`Username: ${username}\nEmail: ${email}\nPassword: ${password}`);
+      try{
+      const data = {username, email, password, Name}
+      console.log(data);
+      await axios.post("http://localhost:8800/signup", data);
+
+    }catch (err){
+      console.log(err);
+    }
+
     }
   };
 
@@ -34,6 +46,16 @@ function Signup() {
                 id="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                value={Name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
@@ -70,7 +92,7 @@ function Signup() {
             <button type="submit" className="sign-up-button">Sign up</button>
           </form>
           <div className="options">
-            Already have an account? <a href="#">Sign in</a>
+            Already have an account? <a href="/login">Sign in</a>
           </div>
         </div>
       </div>

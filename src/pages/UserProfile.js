@@ -1,3 +1,6 @@
+import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import BlogContainer from '../components/BlogContainer';
 //import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -30,8 +33,27 @@ function UserProfile() {
     name: 'Name',
     username: '@username',
     other: 'Kuch bhi',
-    about_me: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin massa lacus, eu egestas dolor tristique at. Nunc vestibulum quis ligula a fermentum. Sed aliquet nec leo at commodo. Nam non rutrum nibh, in finibus neque. Vestibulum mattis nunc dolor, et venenatis elit porta vel. Morbi aliquet blandit tincidunt.'
+    about_me: 'kuch bhi kuch bhi'
   };
+
+  const [data, setData] = useState([]);
+  const username = useParams().username;
+
+  useEffect(
+    ()=>{
+      const fetchData = async()=>{
+        try{
+          const res  = await axios.get("http://localhost:8800/user/"+username);
+          setData(res.data[0]);
+        }
+        catch(err){
+          console.log(err)
+        }
+      };
+      fetchData();
+    }
+  )
+
 
   return (
     <main>
@@ -43,9 +65,9 @@ function UserProfile() {
           </div>
 
           <div className='personal-data'>
-            <div className='name'>{personal_data.name}</div>
-            <div className='username'>{personal_data.username}</div>
-            <div className='other'>{personal_data.other}</div>
+            <div className='name'>{data.user_name}</div>
+            <div className='username'>{data.username}</div>
+            <div className='other'>{data.pass}</div>
           </div>
 
           <div className='edit-profile'>
@@ -55,7 +77,7 @@ function UserProfile() {
 
         <div className='about-me-box'>
           <div className='subheading'>About Me</div>
-          <div className='about-me-data'>{personal_data.about_me}</div>
+          <div className='about-me-data'>{data.about_me}</div>
         </div>
 
         <div className='pinned-blog-box'>
