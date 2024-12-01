@@ -80,7 +80,7 @@ function Home() {
        {/* About Us Section */}
       <AboutUs data={aboutUsData} />
        {/* Highlights section */}
-       <Highlights data={highlightsData} />
+       
       
     </main>
   )

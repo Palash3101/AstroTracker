@@ -1,12 +1,12 @@
 .highlights-section {
   padding: 50px 30px;
   background-color: #f9f9f9;
-  background-image: url("../images/image3.jpg"); /* Specify the image path */
-  background-size: cover; /* Makes the background cover the entire section */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the background from repeating */
-  color: #fff; /* Optional: Change text color for contrast */
-  position: relative; /* Necessary for overlay positioning */
+  background-image: url("../images/image3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
 }
 
 .highlights-section::before {
@@ -16,8 +16,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-  z-index: -1; /* Ensures the overlay stays behind the content */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.section-title {
+  text-align: center; /* Center the text */
+  font-size: 2.5rem; /* Increase the font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  font-size: 3rem; /* Make the title larger */
+}
+
+.section-title p {
+  font-size: 1.2rem; /* Optional: Adjust the size of the paragraph text */
 }
 
 .grid-container {

@@ -3,7 +3,8 @@ import BlogView from "./pages/BlogView.js";
 import UserProfile from "./pages/UserProfile.js";
 
 import "./stylesheets/App.css";
-
+import Highlights from "./components/Highlights.js";
+import { highlightsData } from "./components/data.js";
 import AstronomyCalendar from "./pages/AstronomyCalendar.js";
 import Login from "./pages/LoginForm.js";
 import Signup from "./pages/Signup.js";
@@ -33,7 +34,7 @@ function App() {
             
         </Routes>
       </Router>
-
+      <Highlights data={highlightsData} />
     </div>
 
     
