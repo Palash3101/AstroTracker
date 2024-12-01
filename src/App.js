@@ -9,6 +9,7 @@ import AstronomyCalendar from "./pages/AstronomyCalendar.js";
 import Login from "./pages/LoginForm.js";
 import Signup from "./pages/Signup.js";
 import Blog from "./pages/Blog.js";
+import EditProfile from "./pages/EditProfile.js";
 import NewGallery from "./pages/NewGallery.js";
 import NewBlog from "./pages/NewBlog.js";
 
@@ -28,13 +29,14 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/user/:username/new" element={<NewBlog/>}/>
+          <Route path="/user/:username/edit" element={<EditProfile/>}/>
           <Route path="/user/:username" element={<UserProfile/>}/>
 
           <Route path="/blog/:id" element={<BlogView/>}/>
             
         </Routes>
       </Router>
-      <Highlights data={highlightsData} />
+      
     </div>
 
     

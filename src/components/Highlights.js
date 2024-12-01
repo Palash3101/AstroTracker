@@ -1,9 +1,8 @@
 import React from "react";
 import BlogContainer from "./BlogContainer";
 import "../stylesheets/Highlights.css";
-import { highlightsData } from "../components/data"; // Import the highlights data
 
-export const Highlights = () => {
+export const Highlights = (props) => {
   return (
     <section id="portfolio" className="highlights-section">
       <div className="container">
@@ -13,7 +12,7 @@ export const Highlights = () => {
         </div>
         <div className="grid-container">
           {/* Pass highlightsData to BlogContainer as a prop */}
-          <BlogContainer data={highlightsData} />
+          <BlogContainer data={props.data} />
         </div>
       </div>
     </section>

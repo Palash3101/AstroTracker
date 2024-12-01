@@ -7,7 +7,7 @@ import Header from '../components/Header'
 import BlogContainer from '../components/BlogContainer'
 import NavBar from '../components/NavBar'
 import { Highlights } from "../components/Highlights.js";
-import { highlightsData, aboutUsData } from "../components/data";
+import { aboutUsData } from "../components/data";
 import AboutUs from "../components/AboutUs";
 import axios from 'axios'
 
@@ -15,12 +15,17 @@ function Home() {
 
   const [data, setData] = useState([])
 
+  const [HighlightsData, setHighlightsData] = useState([])
+
   useEffect(
     ()=>{
       const fetchData = async()=>{
         try{
-          const res  = await axios.get("http://localhost:8800/")
+          var res  = await axios.get("http://localhost:8800/")
           setData(res.data)
+          res = await axios.get("http://localhost:8800/pinned")
+          setHighlightsData(res.data)
+          //console.log(HighlightsData)
         }
         catch(err){
           console.log(err)
@@ -80,7 +85,7 @@ function Home() {
        {/* About Us Section */}
       <AboutUs data={aboutUsData} />
        {/* Highlights section */}
-       
+       <Highlights data={HighlightsData} />
       
     </main>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../stylesheets/EditProfile.css';
 import NavBar from '../components/NavBar'
 import Header from '../components/Header'
@@ -6,35 +6,50 @@ import Header from '../components/Header'
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const NewBlog = () => {
+const EditProfile = () => {
     const navigate = useNavigate();
     const username = useParams().username;
 
-    const [Username, setUsername] = useState("");
+    const [user_name, setUser_name] = useState("");
     const [Aboutme, setAboutme] = useState("");
-    const [image, setImage] = useState(null);
-    const handleImageUpload = (event) => {
-        setImage(event.target.files[0]);
-    };
+
+    useEffect(
+        ()=>{
+          const fetchData = async()=>{
+            try{
+              var res  = await axios.get("http://localhost:8800/user/"+username)
+              if (user_name==""){
+                  setAboutme(res.data[0].about_me)
+                  setUser_name(res.data[0].user_name)
+              }
+            }
+            catch(err){
+              console.log(err)
+            }
+          };
+          fetchData();
+        }
+      )
+
     const handleSubmit = async e => {
         e.preventDefault();
         // add image functionality
-        const blogData = {Username,Aboutme};
+        const userData = {user_name,Aboutme};
         //change karlena ye part
         try{
-            console.log(blogData);
-            await axios.post("http://localhost:8800/user/palash/new", blogData).then(res=>{console.log(res)})
+            console.log(userData);
+            await axios.put("http://localhost:8800/user/"+username+"/edit", userData).then(res=>{console.log(res)})
             navigate('/user/'+username);
         }catch(err){
             console.log(err);
         }
 
-        console.log("Profile Updated:", blogData);
+        console.log("Profile Updated:", userData);
         // setTitle("");
         // setContent("");
         // setDesc("");
         // setImage(null);
-        alert("Profile Updated Successfully!");
+        //alert("Profile Updated Successfully!");
     };
 
 return (
@@ -48,8 +63,8 @@ return (
         <label>Username</label>
         <input
             type="text"
-            value={Username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={user_name}
+            onChange={(e) => setUser_name(e.target.value)}
             placeholder="Enter blog title"
             required
         />
@@ -63,7 +78,7 @@ return (
             required
         />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
         <label>Add Profile Image</label>
         <input
             type="file"
@@ -71,7 +86,7 @@ return (
             accept="image/*"
         />
         {image && <p className="file-info">Selected File: {image.name}</p>}
-        </div>
+        </div> */}
         <button type="submit" className="submit-button">
         Submit Changes
         </button>
@@ -82,4 +97,4 @@ return (
 };
 
 
-export default NewBlog;
+export default EditProfile;

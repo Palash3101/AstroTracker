@@ -25,6 +25,15 @@ app.get("/", (req, res)=>{
   })
 })
 
+app.get("/pinned", (req, res)=>{
+  const q = "select blog_id, title, short_desc, author_id from blog where pinned=1";
+  db.query(q, (err,data)=>{
+
+    if (err) return res.json(err);
+    return res.json(data);
+  })
+})
+
 app.get("/calender", (req, res)=>{
   const q = "select * from calender where cur_date between '2024-12-01' and '2024-12-10'";
   db.query(q, (err,data)=>{
@@ -88,6 +97,19 @@ app.post("/user/:username/new", (req, res)=>{
   })
 })
 
+
+app.put("/user/:username/edit", (req, res)=>{
+  const q = "update `user_data` set user_name=?, about_me=? where username=?";
+  
+  console.log(req.body);
+
+  db.query(q, [req.body.user_name, req.body.Aboutme, req.params.username] ,(err,data)=>{
+
+    if (err) return res.json(err);
+    return res.json(data);
+  })
+})
+
 app.get("/user/:username/blog", (req, res)=>{
   const q = "select blog_id, title, short_desc, author_id from blog where author_id=? ";
 
@@ -115,6 +137,9 @@ app.get("/blog/category/:category", (req, res)=>{
     return res.json(data);
   })
 })
+
+
+
 
 app.listen(8800, ()=>{
   console.log("Backend good")

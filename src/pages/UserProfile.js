@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import BlogContainer from '../components/BlogContainer';
@@ -8,27 +8,7 @@ import '../stylesheets/UserProfile.css';
 
 function UserProfile() {
 
-  // const blog_data = [
-  //   {
-  //     id: '1',
-  //     title: 'Saturn\'s Rings',
-  //     desc: 'How long will Saturn\'s Rings last before they disappear?',
-  //     author: 'author'
-  //   },
-  //   {
-  //     id: '2',
-  //     title: 'Saturn\'s Rings',
-  //     desc: 'How long will Saturn\'s Rings last before they disappear?',
-  //     author: 'author'
-  //   },
-  //   {
-  //     id: '3',
-  //     title: 'Saturn\'s Rings',
-  //     desc: 'How long will Saturn\'s Rings last before they disappear?',
-  //     author: 'author'
-  //   }
-  // ];
-
+  const navigate = useNavigate();
   const [blog, setBlog]  = useState([]);
 
   const [data, setData] = useState([]);
