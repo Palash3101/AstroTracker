@@ -7,7 +7,7 @@ import "./stylesheets/App.css";
 import AstronomyCalendar from "./pages/AstronomyCalendar.js";
 import Login from "./pages/LoginForm.js";
 import Signup from "./pages/Signup.js";
-import Blog from "./pages/Blog.js";
+//import Blog from "./pages/Blog.js";
 import NewGallery from "./pages/NewGallery.js";
 import NewBlog from "./pages/NewBlog.js";
 

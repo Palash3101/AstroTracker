@@ -17,24 +17,6 @@
   white-space: nowrap; /* Prevent the text from wrapping */
   overflow: hidden;    /* Hide overflow text */
   display: inline-block;
-  animation: oscillate-text 12s ease-in-out infinite; /* Animation properties */
+  
 }
 
-/* Keyframes for oscillating text movement and size change */
-@keyframes oscillate-text {
-  0% {
-    transform: translateX(0) scale(1.5); /* Normal position, normal size */
-  }
-  25% {
-    transform: translateX(-20%) scale(1); /* Move 20% to the left, increase size */
-  }
-  50% {
-    transform: translateX(0) scale(1.5); /* Back to normal position and size */
-  }
-  75% {
-    transform: translateX(20%) scale(1); /* Move 20% to the right, decrease size */
-  }
-  100% {
-    transform: translateX(0) scale(1.5); /* Back to normal position and size */
-  }
-}
