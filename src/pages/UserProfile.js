@@ -8,26 +8,28 @@ import '../stylesheets/UserProfile.css';
 
 function UserProfile() {
 
-  const blog_data = [
-    {
-      id: '1',
-      title: 'Saturn\'s Rings',
-      desc: 'How long will Saturn\'s Rings last before they disappear?',
-      author: 'author'
-    },
-    {
-      id: '2',
-      title: 'Saturn\'s Rings',
-      desc: 'How long will Saturn\'s Rings last before they disappear?',
-      author: 'author'
-    },
-    {
-      id: '3',
-      title: 'Saturn\'s Rings',
-      desc: 'How long will Saturn\'s Rings last before they disappear?',
-      author: 'author'
-    }
-  ];
+  // const blog_data = [
+  //   {
+  //     id: '1',
+  //     title: 'Saturn\'s Rings',
+  //     desc: 'How long will Saturn\'s Rings last before they disappear?',
+  //     author: 'author'
+  //   },
+  //   {
+  //     id: '2',
+  //     title: 'Saturn\'s Rings',
+  //     desc: 'How long will Saturn\'s Rings last before they disappear?',
+  //     author: 'author'
+  //   },
+  //   {
+  //     id: '3',
+  //     title: 'Saturn\'s Rings',
+  //     desc: 'How long will Saturn\'s Rings last before they disappear?',
+  //     author: 'author'
+  //   }
+  // ];
+
+  const [blog, setBlog]  = useState([]);
 
   const [data, setData] = useState([]);
   const username = useParams().username;
@@ -36,8 +38,10 @@ function UserProfile() {
     ()=>{
       const fetchData = async()=>{
         try{
-          const res  = await axios.get("http://localhost:8800/user/"+username);
+          var res  = await axios.get("http://localhost:8800/user/"+username);
           setData(res.data[0]);
+          res = await axios.get("http://localhost:8800/user/"+username+"/blog");
+          setBlog(res.data.slice(0,3));
         }
         catch(err){
           console.log(err)
@@ -74,8 +78,8 @@ function UserProfile() {
         </div>
 
         <div className='pinned-blog-box'>
-          <div className='pinned_subheading'>Pinned Blogs</div>
-          <BlogContainer data={blog_data} />
+          <div className='pinned_subheading'>My Blogs</div>
+          <BlogContainer data={blog} />
         </div>
 
         <div className='action-buttons'>

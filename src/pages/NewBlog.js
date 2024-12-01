@@ -3,24 +3,37 @@ import '../stylesheets/NewBlog.css';
 import NavBar from '../components/NavBar'
 import Header from '../components/Header'
 
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+
 const NewBlog = () => {
+    const navigate = useNavigate();
+    const username = useParams().username;
+
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
+    const [desc, setDesc] = useState("");
     const [image, setImage] = useState(null);
     const handleImageUpload = (event) => {
         setImage(event.target.files[0]);
     };
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const blogData = {
-        title,
-        content,
-        image,
-        };
+    const handleSubmit = async e => {
+        e.preventDefault();
+        // add image functionality
+        const blogData = {title, content, desc};
+        try{
+            console.log(blogData);
+            await axios.post("http://localhost:8800/user/palash/new", blogData).then(res=>{console.log(res)})
+            navigate('/user/'+username);
+        }catch(err){
+            console.log(err);
+        }
+
         console.log("Blog Data Submitted:", blogData);
-        setTitle("");
-        setContent("");
-        setImage(null);
+        // setTitle("");
+        // setContent("");
+        // setDesc("");
+        // setImage(null);
         alert("Blog Submitted Successfully!");
     };
 
@@ -47,6 +60,15 @@ return (
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="Write your blog content here"
+            required
+        />
+        </div>
+        <div className="form-group">
+        <label>Short description</label>
+        <textarea
+            value={desc}
+            onChange={(e) => setDesc(e.target.value)}
+            placeholder="Write your description here. Will be showed in the mini form..."
             required
         />
         </div>

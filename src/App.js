@@ -21,15 +21,17 @@ function App() {
         <Routes>
 
           <Route path="/calender" element={<AstronomyCalendar/>} />
-          <Route path="/blog" element={<Blog/>} />
+          {/* <Route path="/blog" element={<Blog/>} /> */}
           <Route path="/Gallery" element={<NewGallery/>}/>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>}/>
+          <Route path="/user/:username/new" element={<NewBlog/>}/>
           <Route path="/user/:username" element={<UserProfile/>}/>
+
+          <Route path="/blog/:id" element={<BlogView/>}/>
             
         </Routes>
-
       </Router>
 
     </div>
