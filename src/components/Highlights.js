@@ -1,8 +1,9 @@
 import React from "react";
-import HighlightCard from "./HighlightCard";
+import BlogContainer from "./BlogContainer";
 import "../stylesheets/Highlights.css";
+import { highlightsData } from "../components/data"; // Import the highlights data
 
-export const Highlights = ({ data }) => {
+export const Highlights = () => {
   return (
     <section id="portfolio" className="highlights-section">
       <div className="container">
@@ -11,13 +12,8 @@ export const Highlights = ({ data }) => {
           <p>Explore some of the most exciting updates and news of the week!</p>
         </div>
         <div className="grid-container">
-          {data && data.length > 0 ? (
-            data.map((item, index) => (
-              <HighlightCard key={index} item={item} />
-            ))
-          ) : (
-            <p>Loading...</p>
-          )}
+          {/* Pass highlightsData to BlogContainer as a prop */}
+          <BlogContainer data={highlightsData} />
         </div>
       </div>
     </section>
